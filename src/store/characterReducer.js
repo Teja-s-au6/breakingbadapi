@@ -7,7 +7,6 @@ export const fetchAllCharacters = createAsyncThunk(
     "characters/fetchAllCharacters", async () => {
         try {
             const response = await axios.get(`${config.BASE_URL}/characters`)
-            //console.log(response.data)
             return response.data
         } catch (error) {
             console.log(error.message)
